@@ -17,7 +17,7 @@ contract MyPropertyToken is ERC20, Ownable {
     ) ERC20(_name, _symbol) Ownable(_creator) {  // 這裡加入 Ownable(_creator)
         propertyName = _propertyName;
         propertyManager = _creator;
-        _mint(_creator, _initialSupply * 10 ** decimals());
+        _mint(_creator, _initialSupply);
         // 不需要 transferOwnership，因為已經在 Ownable(_creator) 設定了擁有者
     }
 
