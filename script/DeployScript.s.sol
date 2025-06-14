@@ -51,7 +51,7 @@ contract DeployScript is Script {
         console.log("Third Property Token deployed at:", all[2].tokenAddress);
 
         // Step 4：部署對應的 DAO 合約（針對第一個代幣）
-        PropertyDAO dao = new PropertyDAO(firstTokenAddr);
+        PropertyDAO dao = new PropertyDAO(firstTokenAddr, deployer);
         console.log("PropertyDAO deployed at:", address(dao));
 
         // Step 5：部署市場合約
